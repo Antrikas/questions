@@ -17,7 +17,9 @@
  */
 
 const stringifyId = (arr) => {
-
+ const idArray = arr.map((obj) => obj.id);
+ const uniqueArry = [...new Set(idArray)];
+return uniqueArry.join(", ");
 };
 
 module.exports = stringifyId;
